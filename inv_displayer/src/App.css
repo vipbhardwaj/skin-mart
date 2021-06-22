@@ -1,0 +1,68 @@
+#submitID {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: small;
+  background-color: red;
+  margin: 8px 0;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+#steamID {
+  width: 220px;
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+#myList {
+  width: 300px;
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+#submitID:hover {
+  cursor: pointer;
+}
+.itemHeadings {
+  color: white;
+  font-size: 20px;
+  width: 200px;
+  text-shadow: 2px 1px 2px red;
+}
+#form_bg {
+  background-color: #262626;
+  width: 100%;
+  color: white;
+}
+.id_disp {
+  font-size: 20px;
+  color: white;
+  text-shadow: 2px 1px 2px rgb(255, 0, 0);
+  font-weight: 800;
+  font-size: 23px;
+}
+#invTable {
+  background-color: #000;
+  opacity: 0.8;
+  overflow: auto;
+  height: 415px;
+}
+.moreInfo:hover {
+  color: black;
+  text-shadow: 0px 0px 5px red;
+  cursor: pointer;
+  font-size: 22px;
+}

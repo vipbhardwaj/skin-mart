@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Skin Mart - Market Page</title>
+        <link rel="stylesheet" href="../../style/market_page.css" type='text/css'/>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var i = 0;
+            var imgs = new Array("../../style/proScene1.jpg", "../../style/proScene2.jpg", "../../style/proScene12.jpg", "../../style/proScene3.jpg", "../../style/proScene4.jpg", "../../style/proScene5.jpg", "../../style/proScene6.jpg", "../../style/proScene7.jpg", "../../style/proScene8.jpg", "../../style/proScene9.jpg", "../../style/proScene10.png", "../../style/proScene11.jpg");
+            var polaroid_txt = new Array("Astralis - CSGO Major Circuit Qualifiers", "Jarosław-pashaBiceps-Jarząbkowski","Stephanie-missharvey--Harvey" , "2017. July 23rd - Gambit Esports win PGL Major Kraków 2017", "January 28, 2018, Cloud9 defeated FaZe Clan 2–1 at the ELEAGUE Major: Boston 2018 finals", "Oleksandr-s1mple-Kostyliev", "Anna-Ant1ka-Ananikova", "Ksenia-vilga-Klyuenkova", "ELEAGUE MAJOR - Cloud-9 (Stewie2K, Skadoodle, autimatic, RUSH, tarik)", "Team Liquid - (nitr0, NAF, Twistzz, EliGE, TACO)", "Team Dignitas CS: GO Female (EMUHLEET, artStar, rain, GooseBreeder, CAth)", "Amanda-rain-Smith");
+            var img = 0;
+            function whatsSteamID() {
+                document.getElementById("pop_whatsSteamID").style.display = "block";
+            }
+            function whatsCsgo() {
+                document.getElementById("pop_whatsCsgo").style.display = "block";
+                document.getElementById("proSceneVid").currentTime = 43;
+                IntervalForProSceneImg = setInterval(nextImage, 5000);
+            }
+            function popClose() {
+                pop_whatsSteamID.style.display = "none";
+            }
+            function popCloseWhatsCsgo() {
+                pop_whatsCsgo.style.display = "none";
+                clearInterval(IntervalForProSceneImg);
+            }
+            function nextImage() {
+                var div = document.getElementById("proSceneImg");
+                var divCaption = document.getElementById("polaroid");
+                div.src = imgs[(Math.abs(++img))%12];
+                divCaption.innerText = polaroid_txt[(Math.abs(img))%12];
+            }
+        </script>
+        <div id="menu" class="head">
+            <table width="100%" class="head">
+                <tr class="head">
+                    <th class="head" width="70%"><h4" id="welcome" title="Please give full marks pretty high tier project this was">WELCOME TO SKIN MART</h4></th>
+                    <th id="whatsSteamID" title="Related to stuff like CUSTOM URLs" onclick="whatsSteamID()" ><u>What is a SteamID-64 ?</u></th>
+                    <th id="whatsCsgo" onclick="whatsCsgo()" title="You should know what is CSGO"><u>WHAT IS CSGO</u>&nbsp;??!!&nbsp;&nbsp;&nbsp;&nbsp;:(</th>
+                </tr>
+            </table>
+        </div>
+        <hr color="red" style="position: sticky;"/>
+        <div id="form_th">
+        </div>
+        <div id="pop_whatsSteamID">
+            <div id="pop_whatsSteamID-content">
+                <span id="popClose" onclick="popClose()" title="close"><strong>&times;</strong></span>
+                <p>Well, there can be two options, if you have set your steamURL (a custom URL through which your friends can find you), then, you need to enter that custom URL in this page at the bottom to get your 17 digit number which is your STEAM ID 64.
+                    <br/><strong><mark>On the contrary</mark></strong>, if you have not set any Custom URL set, just go to your Steam app,
+                    <br/>Go to View -> Settings -> Interface. Check the box saying, view steamURL when available. Then, go to your profile page and you should see your steamID-64 on the top at the address bar of the page. It is a 17-digit number.
+                </p>
+                <iframe style="margin-left : 25%; opacity: 0.8; float: right;" src="https://steamid.xyz/" height="300px" width="50%"></iframe>
+            </div>
+        </div>
+        <div id="pop_whatsCsgo">
+            <div id="pop_whatsCsgo-content">
+                <span id="popCloseWhatsCsgo" onclick="popCloseWhatsCsgo()" title="close"><strong>&times;</strong></span>
+                <p><span class="aboutCsgo">About CS:GO:-</span>
+                    <br/>Counter-Strike: Global Offensive (CS:GO) expands upon the team-based first person shooter gameplay the original Counter-Strike pioneered when it launched in 1999. Two teams compete in multiple rounds of objective-based game modes with the goal of winning enough rounds to win the match.
+                    <br/><br/>CS:GO features new maps, characters, and weapons and delivers updated versions of the classic Counter-Strike maps like Dust, Inferno, Nuke, Train, and more. In addition, CS:GO introduces new game modes like Arms Race, Flying Scoutsman and Wingman, and features online matchmaking and Competitive Skill Groups.
+                    <br/><br/><span class="aboutCsgo">WHY?</span>&nbsp;&nbsp;&nbsp;PRO SCENE - (video courtesy of YOUTUBE Channel :-&nbsp;<a style="color: red; font-size: 20px; font-weight: 700;" href="https://www.youtube.com/watch?v=YHsOMvbpbfA">Virre CSGO</a>&nbsp;)&nbsp;(Images courtesy of .... GOOGLE?)
+                    <div id = "proScene">
+                        <iframe id="proSceneVid" height="250px" width="450px" src="https://youtube.com/embed/z40db4NiYDw"></iframe>
+                        <div id = "proSceneImg-Content">
+                            <img id="proSceneImg" src="../../style/proScene1.jpg" width="400px">
+                            <div id = "polaroid">Astralis - CSGO Major Circuit Qualifiers</div>
+                        </div>
+                    </div>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
