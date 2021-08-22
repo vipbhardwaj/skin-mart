@@ -15,10 +15,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static(path.join(__dirname)));
 app.use(express.json({ limit: '10mb' }));
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'market_page.html'));
-});
-
+if (process.env.NODE_ENV) {
+    app.use(express.static(path.resolve(process.cwd(), 'client/build')))
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, 'market_page.html'));
+    })
+}
 app.post('/', (req, response) => { // 2 way thingy
     //STEAM API CODE.
     inventoryApi.init           // initialising the STEAM inventory API object using init.
