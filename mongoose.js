@@ -1,4 +1,4 @@
-const mongoose = require("../node-v14.13.0-win-x64/node_modules/npm/node_modules/mongoose");
+const mongoose = require("./inv_displayer/node_modules/mongoose");
 const Schema = mongoose.Schema;
 
 mongoose.connect('mongodb://localhost/27017', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
