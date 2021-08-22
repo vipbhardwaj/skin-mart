@@ -5,8 +5,8 @@ const market = require('./inv_displayer/node_modules/steam-market-pricing');
 const InventoryApi = require('./inv_displayer/node_modules/steam-inventory-api/dist/index.js');
 const inventoryLayout = require("./mongoose");
 //const { name } = require('D:/COLLEGE CRAP/Y2/WebDev/skinMart/node_modules/body-parser');
-var MongoClient=require('./inv_displayer/node_modules/mongodb').MongoClient;
-var url = "mongodb://localhost:27017/";
+//var MongoClient=require('./inv_displayer/node_modules/mongodb').MongoClient;
+//var url = "mongodb://localhost:27017/";
 
 
 const app = express();   ///initiates express
@@ -73,7 +73,7 @@ app.post('/', (req, response) => { // 2 way thingy
         
                                         //SAVING STUFF INTO DATABASE.
         // MONGO STUFF ////////////////////////////////////////////////////////////////////////////////////////////////
-        MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true}, function(err, client) {
+        /*MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true}, function(err, client) {
             if (err) throw err;
             var db = client.db("inventories");
             db.collection("customers").insertOne(myInventory, function(err) {
@@ -81,7 +81,7 @@ app.post('/', (req, response) => { // 2 way thingy
               console.log("1 document inserted");
               client.close();
             });
-          });
+        });*/
           ////////////////////////////////////////////////////////////////////////////////////////////////////
     })
     .catch((err) => {       // if response is reject

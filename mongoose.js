@@ -1,13 +1,13 @@
 const mongoose = require("./inv_displayer/node_modules/mongoose");
 const Schema = mongoose.Schema;
 
-mongoose.connect('mongodb://localhost/27017', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+/*mongoose.connect('mongodb://localhost/27017', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 var db = mongoose.connection.once('open', () => {
     console.log("YAY");
 }).on('error', () => {
     console.log("NOT YAY");
-});
+});*/
 
 const itemsSchema = new Schema({
     name: String,
