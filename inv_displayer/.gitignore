@@ -25,3 +25,4 @@ yarn-error.log*
 # data
 ./src/inventories
 ../inv_desc_right
+../node_modules
