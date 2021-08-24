@@ -22,7 +22,7 @@ class App extends Component {
 
   async showInfo(item) {
     this.setState({item: item});
-    var response = await fetch('/more-info', {
+    var response = await fetch('https://skinMart.vipulbhardwaj.repl.co/more-info', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ class App extends Component {
     this.setState({post: this.input.value});
     this.state.post = this.input.value;
 
-    var response = await fetch('/', {
+    var response = await fetch('https://skinMart.vipulbhardwaj.repl.co/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
