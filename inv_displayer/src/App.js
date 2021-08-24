@@ -25,6 +25,7 @@ class App extends Component {
     var response = await fetch('https://skinMart.vipulbhardwaj.repl.co/more-info', {
       method: 'POST',
       headers: {
+        'Access-Control-Allow-Origin': 'https://skinMart.vipulbhardwaj.repl.co',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ item: item })
@@ -51,6 +52,7 @@ class App extends Component {
     var response = await fetch('https://skinMart.vipulbhardwaj.repl.co/', {
       method: 'POST',
       headers: {
+        'Access-Control-Allow-Origin': 'https://skinMart.vipulbhardwaj.repl.co',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ post: this.state.post, gameCode: this.state.gameCode })
