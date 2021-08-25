@@ -15,6 +15,7 @@ body
     background-color: #262626;
 }
 .grid-item {
+    color: white;
     text-align: center;
     font-size: 1.5rem;
     padding: 0.5rem;
@@ -73,26 +74,30 @@ body
     height: 70%;
     overflow: auto;
 }
-#whatsSteamID
-{
-    color: white;
+.underline {
+    display: inline-block;
+    position: relative;
     width: auto;
-    height: 1.6rem;
 }
-#whatsSteamID:hover
-{
+.underline:hover {
     cursor: pointer;
     color: red;
 }
-#whatsCsgo
-{
-    color: white;
-    width: auto;
-    height: 1.6rem;
+.underline:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    transform-origin: bottom right;
+    transition: transform 0.35s ease-out;
 }
-#whatsCsgo:hover {
-    cursor: pointer;
-    color: red;
+.underline:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 #popClose
 {
@@ -114,8 +119,7 @@ body
     font-size: 48px;
     font-weight: bold;
 }
-#popCloseWhatsCsgo:hover,
-#popCloseWhatsCsgo:focus {
+#popCloseWhatsCsgo:hover, #popCloseWhatsCsgo:focus {
     color: rgb(255, 255, 255);
     text-decoration: none;
     cursor: pointer;

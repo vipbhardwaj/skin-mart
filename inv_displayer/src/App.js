@@ -21,6 +21,7 @@ class App extends Component {
   }
 
   async showInfo(item) {
+    document.getElementById("loading").style.visibility = "visible";
     this.setState({item: item});
     var response = await fetch('https://skinMart.vipulbhardwaj.repl.co/more-info', {
       method: 'POST',
@@ -40,12 +41,13 @@ class App extends Component {
     else {
       alert(item + " is non-marketable :(");
     }
+    document.getElementById("loading").style.visibility = "hidden";
   }
 
   handleSubmit = async e => {
     //this.setState({gameCode: this.input.gameCodeValue});
-
     e.preventDefault();
+    document.getElementById("loading").style.visibility = "visible";
     this.setState({post: this.input.value});
     this.state.post = this.input.value;
 
@@ -61,6 +63,7 @@ class App extends Component {
     this.setState({ responseToPost: data });
     //console.log(this.state.responseToPost);
     document.getElementById("invTable").style.display = "block";
+    document.getElementById("loading").style.visibility = "hidden";
   };
   
   render() {
@@ -70,22 +73,22 @@ class App extends Component {
     return (
       <React.Fragment>
         <div id="form_bg">
-          <form onSubmit={ this.handleSubmit } style={{float: 'left', marginLeft: '10px'}}> 
-            <input type="text" name="post" required="required" id="steamID" ref={(input)=>this.input = input} placeholder="Enter a 17 digit unique ID"/>
-
-            <label>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Select a Game : </label>    
-            <select id = "myList" value={ this.state.gameCode } onChange={ this.onChange }>
-              <option selected value = "730">Counter-Strike: Global Offensive</option>
-              <option value = "440">Team Fortress 2</option>
-              <option value = "578080">PUBG</option>
-              <option value = "304930">Unturned</option>
-              <option value = "570">Dota 2</option>
-              <option value = "218620">PAYDAY 2</option>
-            </select>
-            
-            <button id="submitID" type="submit" title="Clicking or what?"><strong>SHOW INVENOTRY</strong></button>
+          <form class="form-container" onSubmit={ this.handleSubmit }> 
+            <input type="text" name="post" required="required" id="steamID" class="form-item" ref={(input)=>this.input = input} placeholder="Enter a 17 digit unique ID"/>
+            <div class="form-item">
+              <label>Select a Game : </label>    
+              <select id = "myList" value={ this.state.gameCode } onChange={ this.onChange }>
+                <option selected value = "730">Counter-Strike: Global Offensive</option>
+                <option value = "440">Team Fortress 2</option>
+                <option value = "578080">PUBG</option>
+                <option value = "304930">Unturned</option>
+                <option value = "570">Dota 2</option>
+                <option value = "218620">PAYDAY 2</option>
+              </select>
+            </div>  
+            <button class="form-item" id="submitID" type="submit" title="Clicking or what?"><strong>SHOW INVENOTRY</strong></button>
           </form>
-          <br/><br/><br/><br/><hr/>
+          <hr id="loading"/>
         </div>
         <p className="id_disp">Account ID = { this.state.post },&nbsp;&nbsp;&nbsp;&nbsp;Total Items = { inventory.totalItems }</p>
         <table id="invTable" style={{display: "none"}}>

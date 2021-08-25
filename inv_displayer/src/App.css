@@ -8,6 +8,32 @@
   border-radius: 4px;
   cursor: pointer;
   margin-left: 10px;
+}.form-container {
+  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.form-item {
+  padding: 0.5rem;
+  text-align: center;
+}
+#loading {
+  visibility: hidden;
+  color: red;
+  animation: loader 2s ease-in infinite;
+}
+@keyframes loader {
+  0% { 
+    transform: scaleX(0);
+    transform-origin: bottom left;
+  } 
+  50% { 
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
 }
 #steamID {
   width: 220px;
