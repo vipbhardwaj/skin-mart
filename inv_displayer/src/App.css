@@ -8,7 +8,8 @@
   border-radius: 4px;
   cursor: pointer;
   margin-left: 10px;
-}.form-container {
+}
+.form-container {
   align-items: center;
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -64,31 +65,30 @@
 }
 .itemHeadings {
   color: white;
-  font-size: 20px;
-  width: 200px;
+  font-size: 2rem;
   text-shadow: 2px 1px 2px red;
+  font-family: 'Staatliches', cursive;
 }
 #form_bg {
   background-color: #262626;
-  width: 100%;
   color: white;
 }
 .id_disp {
-  font-size: 20px;
+  font-size: 2rem;
   color: white;
   text-shadow: 2px 1px 2px rgb(255, 0, 0);
-  font-weight: 800;
-  font-size: 23px;
+  font-family: 'Staatliches', cursive;
 }
 #invTable {
   background-color: #000;
-  opacity: 0.8;
+  opacity: 0.9;
   overflow: auto;
-  height: 415px;
+  height: 22rem;
+  display: none;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.3rem;
+  text-align: center;
 }
-.moreInfo:hover {
-  color: black;
-  text-shadow: 0px 0px 5px red;
-  cursor: pointer;
-  font-size: 22px;
+.moreInfo > .underline:hover {
+  text-shadow: 0px 0px 4px black;
 }

@@ -91,7 +91,7 @@ class App extends Component {
           <hr id="loading"/>
         </div>
         <p className="id_disp">Account ID = { this.state.post },&nbsp;&nbsp;&nbsp;&nbsp;Total Items = { inventory.totalItems }</p>
-        <table id="invTable" style={{display: "none"}}>
+        <table id="invTable">
           <tbody>
             <tr>
               <th className="itemHeadings">Item Names</th><th className="itemHeadings">Tradability</th><th className="itemHeadings">Type</th>
@@ -100,7 +100,7 @@ class App extends Component {
                 item => {
                   return (
                     <tr key = {item._id}>
-                      <td onClick={ this.showInfo.bind(this, item.name) } className="moreInfo" title="Click for the item's current price" style={{height: '40px', border: '1px solid red', color: 'white', width: '50%'}}>{ item.name }</td>
+                      <td onClick={ this.showInfo.bind(this, item.name) } className="moreInfo" title="Click for the item's current price" style={{height: '40px', border: '1px solid red', color: 'white', width: '50%'}}><div class="underline">{ item.name }</div></td>
                       <td style={{height: '40px', border: '1px solid red', color: 'white', width: '20%'}}>{ JSON.stringify(item.tradable) }</td>
                       <td style={{height: '40px', border: '1px solid red', color: 'white', width: '30%'}}>{ item.type }</td>
                     </tr>

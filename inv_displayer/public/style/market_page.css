@@ -13,11 +13,13 @@ body
     display: grid;
     grid-template-columns: auto auto auto auto;
     background-color: #262626;
+    font-family: 'Lobster', cursive;
+    font-size: 1.2rem;
+
 }
 .grid-item {
     color: white;
     text-align: center;
-    font-size: 1.5rem;
     padding: 0.5rem;
 }
 #pop_whatsSteamID
@@ -131,8 +133,8 @@ body
     font-weight: 800;
 }
 #form_th {
-    margin-right: 15%;
-    margin-left: 15%;
+    width: 70rem;
+    margin: 0 auto;
 }
 #welcome {
     grid-column-start: 1;
