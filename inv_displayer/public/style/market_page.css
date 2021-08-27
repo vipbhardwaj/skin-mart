@@ -56,13 +56,31 @@ body
     background-color: #262626;
     background-image: url("./whatsSteamIDBG.jpg");
     background-size: cover;
+    margin: auto;
     color: white;
     text-shadow: 2px 1px 2px red;
-    margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
     height: 70%;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: grid;
+    grid-template-columns: [start] 55% [line2] auto [line3] 10px [end];
+    grid-template-rows: [start] 10px [line2] 100% [end];
+}
+#pop_whatsSteamID-content > p {
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+}
+#pop_whatsSteamID-content > iframe {
+    align-items: center;
+    width: 95%;
+    height: 95%;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
 }
 #pop_whatsCsgo-content {
     background-color: #262626;
@@ -72,9 +90,11 @@ body
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
+    text-shadow:  2px 1px 2px black;
     width: 80%;
     height: 70%;
     overflow: auto;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 .underline {
     display: inline-block;
@@ -101,12 +121,14 @@ body
     transform: scaleX(1);
     transform-origin: bottom left;
 }
-#popClose
-{
+#popClose {
+    margin: auto;
     color: red;
     float: right;
     font-size: 48px;
     font-weight: bold;
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
 }
 #popClose:hover,
 #popClose:focus

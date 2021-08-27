@@ -60,6 +60,7 @@ app.post('/', (req, response) => { // 2 way thingy
         res.items.map(      // iterating the inventory
             item => {
                 var obj = {
+                    id: assetid,
                     name: item.market_hash_name,
                     tradable: item.tradable,
                     type: item.type
