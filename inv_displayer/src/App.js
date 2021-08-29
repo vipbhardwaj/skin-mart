@@ -68,26 +68,29 @@ class App extends Component {
         <div id="form_bg">
           <form className="form-container" onSubmit={ this.handleSubmit }> 
             <input type="text" name="post" required="required" id="steamID" className="form-item" ref={(input)=>this.input = input} placeholder="Enter a 17 digit unique ID"/>
-            <div className="form-item">
-              <label>Select a Game : </label>    
-              <select id = "myList" value={ this.state.gameCode } onChange={ this.onChange }>
-                <option defaultValue = "730">Counter-Strike: Global Offensive</option>
-                <option value = "440">Team Fortress 2</option>
-                <option value = "578080">PUBG</option>
-                <option value = "304930">Unturned</option>
-                <option value = "570">Dota 2</option>
-                <option value = "218620">PAYDAY 2</option>
-              </select>
-            </div>  
+            <select id = "myList" className="form-item" value={ this.state.gameCode } onChange={ this.onChange }>
+              <option defaultValue = "730">Counter-Strike: Global Offensive</option>
+              <option value = "440">Team Fortress 2</option>
+              <option value = "578080">PUBG</option>
+              <option value = "304930">Unturned</option>
+              <option value = "570">Dota 2</option>
+              <option value = "218620">PAYDAY 2</option>
+            </select>  
             <button className="form-item" id="submitID" type="submit" title="Clicking or what?"><strong>SHOW INVENOTRY</strong></button>
           </form>
           <hr id="loading"/>
         </div>
-        <p className="id_disp">Account ID = { this.state.post },&nbsp;&nbsp;&nbsp;&nbsp;Total Items = { inventory.totalItems }</p>
+        <div className="id_disp">
+          <div id="accID">Account ID = { this.state.post }</div>
+          <div>Total Items = { inventory.totalItems }</div>
+        </div>
         <div id="invTable">
           <div className="gridHead">
-            <div className="itemHeadings">Item Names</div><div className="itemHeadings">Tradability</div><div className="itemHeadings">Type</div>
+            <div className="itemHeadings">Item Names</div>
+            <div className="itemHeadings">Tradability</div>
+            <div className="itemHeadings">Type</div>
           </div>
+          <div className="itemsGrid">
           {(inventory.items !== undefined) && (inventory.items.map (
             item => {
               return (
@@ -101,6 +104,7 @@ class App extends Component {
               );
             }
           ))}
+          </div>
         </div>
       </React.Fragment>
     );

@@ -1,8 +1,6 @@
-body
-{
-    font-family: candara;
-    background-image: url("./marketPageBG.jpg");
-    background-size: cover;
+body {
+    background-color: rgb(43, 0, 0);
+    background-repeat: no-repeat;
 }
 #csgoInfo:hover {
     cursor: pointer;
@@ -10,12 +8,12 @@ body
 }
 .grid-container {
     align-items: center;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    display: flex;
+    flex-direction: row;
     background-color: #262626;
     font-family: 'Lobster', cursive;
-    font-size: 1.2rem;
-
+    font-size: 1.5rem;
+    height: 12vh;
 }
 .grid-item {
     color: white;
@@ -34,7 +32,6 @@ body
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.8);
 }
 #pop_whatsCsgo {
@@ -48,30 +45,26 @@ body
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.8);
 }
-#pop_whatsSteamID-content
-{
-    background-color: #262626;
-    background-image: url("./whatsSteamIDBG.jpg");
-    background-size: cover;
-    margin: auto;
+#pop_whatsSteamID-content {
+    background-color: rgb(0, 0, 43);
     color: white;
-    text-shadow: 2px 1px 2px red;
+    text-shadow: 2px 1px 2px black;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    height: 70%;
     font-family: 'Roboto Condensed', sans-serif;
     display: grid;
+    margin: auto;
+    width: 80%;
     grid-template-columns: [start] 55% [line2] auto [line3] 10px [end];
     grid-template-rows: [start] 10px [line2] 100% [end];
 }
 #pop_whatsSteamID-content > p {
+    background-color: rgba(0,0,0,0.5);
     text-align: center;
     padding: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
 }
@@ -83,18 +76,22 @@ body
     grid-row: 2 / span 1;
 }
 #pop_whatsCsgo-content {
-    background-color: #262626;
-    background-image: url("./whatsCsgoBG.jpg");
-    background-size: cover;
+    background-color: rgb(0, 43, 0);
     color: white;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    text-shadow:  2px 1px 2px black;
     width: 80%;
     height: 70%;
     overflow: auto;
     font-family: 'Roboto Condensed', sans-serif;
+}
+#pop_whatsCsgo-content > p {
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    text-shadow:  2px 1px 2px black;
+    background-color: rgba(0,0,0,0.5);
 }
 .underline {
     display: inline-block;
@@ -155,7 +152,7 @@ body
     font-weight: 800;
 }
 #form_th {
-    width: 70rem;
+    width: 85vw;
     margin: 0 auto;
 }
 #welcome {
@@ -163,13 +160,17 @@ body
     grid-column-end: 3;
     color: white;
     font-size: 2.5rem;
+    margin-right: auto;
+}
+#proScene {
+    display: flex;
+    flex-direction: row;
 }
 #proSceneVid {
-    float: left;
+    margin-right: auto;
     box-shadow: 0 2px 6px 0 rgb(0, 0, 0), 0 6px 20px 0 rgb(0, 0, 0);
 }
 #proSceneImg-Content {
-    float: right;
     width: 400px;
     background-color: white;
     box-shadow: 0 2px 6px 0 rgb(0, 0, 0), 0 6px 20px 0 rgb(0, 0, 0);
@@ -179,4 +180,40 @@ body
     color: black;
     text-align: center;
     padding: 10px 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .grid-container {
+        min-height: 180px;
+        display: flex;
+        flex-direction: column;
+    }
+    #proScene {
+        display: flex;
+        flex-direction: column;
+    }
+    #proSceneVid {
+        margin-bottom: auto;
+        box-shadow: 0 2px 6px 0 rgb(0, 0, 0), 0 6px 20px 0 rgb(0, 0, 0);
+    }
+}
+#bgShine {
+    position: absolute;
+    width: 50px;
+    height: 150vh;
+    background-color: crimson;
+    transform: rotate(90deg);
+    animation: bgAnime 5s infinite ease-in;
+}
+@keyframes bgAnime {
+    0% {
+        transform-origin: bottom left;
+        transform: translateX(0vw);
+        transform: translateY(0vh);
+    }
+    100% {
+        transform-origin: top right;
+        transform: translateX(100vw);
+        transform: translateY(100vh);
+    }
 }

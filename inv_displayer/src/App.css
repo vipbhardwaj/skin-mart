@@ -1,22 +1,59 @@
-#submitID {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: small;
-  background-color: red;
-  margin: 8px 0;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 10px;
-}
 .form-container {
+  height: 10vh;
+  padding: 0.5rem;
   align-items: center;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(auto-fill, 33%);
 }
 .form-item {
+  color: white;
+  height: 3rem;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  margin: auto;
   padding: 0.5rem;
-  text-align: center;
+  text-align: center;  
+}
+.id_disp {
+  padding: 1rem;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 1px 2px rgb(0, 0, 0);
+  background-color: rgba(0,0,0,0.5);
+  font-family: 'Staatliches', cursive;
+  display: flex;
+  flex-direction: row;
+}
+#accID {
+  margin-right: auto;
+}
+@media screen and (max-width: 800px) {
+  .form-container {
+    height: 30vh;
+    min-height: 200px;
+    padding: 0.5rem;
+    grid-template-columns: [start] 100% [end];
+    align-items: center;
+    grid-gap: 0.5rem;
+  }
+  .form-item {
+    color: white;
+    height: 3rem;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    margin: auto;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  .id_disp {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 1px 2px rgb(0, 0, 0);
+    background-color: rgba(0,0,0,0.5);
+    font-family: 'Staatliches', cursive;
+    display: flex;
+    flex-direction: column;
+  }
 }
 #loading {
   visibility: hidden;
@@ -37,28 +74,17 @@
   }
 }
 #steamID {
-  width: 220px;
   background-color: black;
-  color: white;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
   box-sizing: border-box;
-  margin-left: 10px;
 }
 #myList {
-  width: 300px;
-  background-color: black;
-  color: white;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;background-color: black;
   box-sizing: border-box;
-  margin-left: 10px;
+}
+#submitID {
+  background-color: red;
+  color: black;
 }
 #submitID:hover {
   cursor: pointer;
@@ -70,24 +96,28 @@
   font-family: 'Staatliches', cursive;
 }
 #form_bg {
+  width: 100%;
   background-color: #262626;
   color: white;
 }
-.id_disp {
-  font-size: 2rem;
-  color: white;
-  text-shadow: 2px 1px 2px rgb(255, 0, 0);
-  font-family: 'Staatliches', cursive;
-}
+
 #invTable {
   background-color: #000;
   opacity: 0.9;
-  overflow: auto;
-  height: 22rem;
+  height: 55vh;
+  width: 100%;
   display: none;
   font-family: 'Architects Daughter', cursive;
   font-size: 1.3rem;
   text-align: center;
+  animation: wipeEnter 1s;
+}
+@keyframes wipeEnter {
+    0% {
+        transform: scale(0, 0.025);
+    } 50% {
+        transform: scale(1, 0.025);
+    }
 }
 .gridHead {
   display: grid;
@@ -102,6 +132,10 @@
   text-align: center;
   height: 3rem;
   color: white;
+}
+.itemsGrid {
+  overflow: auto;
+  height: calc(55vh - 3rem);
 }
 .underline-table {
   position: relative;

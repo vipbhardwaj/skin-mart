@@ -40,14 +40,14 @@
         </script>
         <div class="grid-container">
             <div class="grid-item" id="welcome">Welcome to Skin Mart</div>
-            <div class="grid-item" id="whatsSteamID" title="CUSTOM URLs" onclick="whatsSteamID()"><div class="underline">What is a SteamID-64 ?</div></div>
-            <div class="grid-item" id="whatsCsgo" onclick="whatsCsgo()"><div class="underline">What is CSGO ?</div></div>
+            <div class="grid-item" title="CUSTOM URLs" onclick="whatsSteamID()"><div class="underline">What is a SteamID-64 ?</div></div>
+            <div class="grid-item" onclick="whatsCsgo()"><div class="underline">What is CSGO ?</div></div>
         </div>
         <hr color="red" style="position: sticky;"/>
         <div id="form_th"></div>
         <div id="pop_whatsSteamID">
             <div id="pop_whatsSteamID-content">
-                <span id="popClose" onclick="popClose()" title="close"><strong>&times;</strong></span>
+                <span className="grid-whatsSteamID-item" id="popClose" onclick="popClose()" title="close"><strong>&times;</strong></span>
                 <p className="grid-whatsSteamID-item">
                     Well, there can be two options, if you have set your steamURL (a custom URL through which your friends can find you), then, you need to enter that custom URL in this page at the bottom to get your 17 digit number which is your STEAM ID 64.
                     <br/><strong>On the contrary</strong>, if you have not set any Custom URL set, just go to your Steam app,
@@ -63,15 +63,16 @@
                     <br/>Counter-Strike: Global Offensive (CS:GO) expands upon the team-based first person shooter gameplay the original Counter-Strike pioneered when it launched in 1999. Two teams compete in multiple rounds of objective-based game modes with the goal of winning enough rounds to win the match.
                     <br/><br/>CS:GO features new maps, characters, and weapons and delivers updated versions of the classic Counter-Strike maps like Dust, Inferno, Nuke, Train, and more. In addition, CS:GO introduces new game modes like Arms Race, Flying Scoutsman and Wingman, and features online matchmaking and Competitive Skill Groups.
                     <br/><br/><span class="aboutCsgo">WHY?</span>&nbsp;&nbsp;&nbsp;PRO SCENE - (video courtesy of YOUTUBE Channel :-&nbsp;<a style="color: red; font-size: 20px; font-weight: 700;" href="https://www.youtube.com/watch?v=YHsOMvbpbfA">Virre CSGO</a>&nbsp;)&nbsp;(Images courtesy of .... GOOGLE?)
-                    <div id = "proScene">
-                        <iframe id="proSceneVid" height="250px" width="450px" src="https://youtube.com/embed/z40db4NiYDw"></iframe>
-                        <div id = "proSceneImg-Content">
-                            <img id="proSceneImg" src="./style/proScene1.jpg" width="400px">
-                            <div id = "polaroid">Astralis - CSGO Major Circuit Qualifiers</div>
-                        </div>
-                    </div>
                 </p>
+                <div id = "proScene">
+                    <iframe id="proSceneVid" height="250px" width="450px" src="https://youtube.com/embed/z40db4NiYDw"></iframe>
+                    <div id = "proSceneImg-Content">
+                        <img id="proSceneImg" src="./style/proScene1.jpg" width="400px">
+                        <div id = "polaroid">Astralis - CSGO Major Circuit Qualifiers</div>
+                    </div>
+                </div>
             </div>
         </div>
+        <div className="bgShine"></div>
     </body>
 </html>
