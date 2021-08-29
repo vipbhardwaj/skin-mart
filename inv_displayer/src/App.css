@@ -16,7 +16,7 @@
 }
 .id_disp {
   padding: 1rem;
-  font-size: 2rem;
+  font-size: 5vh;
   color: white;
   text-shadow: 2px 1px 2px rgb(0, 0, 0);
   background-color: rgba(0,0,0,0.5);
@@ -26,34 +26,6 @@
 }
 #accID {
   margin-right: auto;
-}
-@media screen and (max-width: 800px) {
-  .form-container {
-    height: 30vh;
-    min-height: 200px;
-    padding: 0.5rem;
-    grid-template-columns: [start] 100% [end];
-    align-items: center;
-    grid-gap: 0.5rem;
-  }
-  .form-item {
-    color: white;
-    height: 3rem;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 4px;
-    margin: auto;
-    padding: 0.5rem;
-    text-align: center;
-  }
-  .id_disp {
-    font-size: 2rem;
-    color: white;
-    text-shadow: 2px 1px 2px rgb(0, 0, 0);
-    background-color: rgba(0,0,0,0.5);
-    font-family: 'Staatliches', cursive;
-    display: flex;
-    flex-direction: column;
-  }
 }
 #loading {
   visibility: hidden;
@@ -160,4 +132,32 @@
 .item-name:hover {
   cursor: pointer;
   color: red;
+}
+@media screen and (max-width: 800px) {
+  .form-container {
+    height: 20vh;
+    min-height: 150px;
+    padding: 0.5rem;
+    grid-template-columns: [start] 100% [end];
+    align-items: center;
+    grid-gap: 0.5rem;
+  }
+  .form-item {
+    color: white;
+    height: 3rem;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    margin: auto;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  .id_disp {
+    font-size: 4vh;
+    color: white;
+    text-shadow: 2px 1px 2px rgb(0, 0, 0);
+    background-color: rgba(0,0,0,0.5);
+    font-family: 'Staatliches', cursive;
+    display: flex;
+    flex-direction: column;
+  }
 }
