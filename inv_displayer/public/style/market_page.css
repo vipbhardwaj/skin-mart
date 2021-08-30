@@ -1,7 +1,7 @@
 body {
     background-color: rgb(43, 0, 0);
     background-repeat: no-repeat;
-    overflow-x: none;
+    overflow-x: hidden;
 }
 #csgoInfo:hover {
     cursor: pointer;
@@ -231,6 +231,9 @@ body {
     }
     #popClose {
         margin-right: 0;
+    }
+    body {
+        overflow-x: hidden;
     }
 }
 .bgShine1 {
