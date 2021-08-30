@@ -12,15 +12,14 @@ const inventoryLayout = require("./mongoose");
 const app = express();   ///initiates express
 const inventoryApi = Object.create(InventoryApi);
 app.use(bodyParser.urlencoded({extended: true}));
-
 app.use(express.static(path.join(__dirname)));
 app.use(express.json({ limit: '10mb' }));
-if (process.env.NODE_ENV) {
-    app.use(express.static(path.resolve(process.cwd(), 'client/build')))
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, 'market_page.html'));
-    })
-}
+
+app.get('/', (req, res) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.sendFile(path.join(__dirname, '/'));
+});
+
 app.post('/', (req, response) => { // 2 way thingy
     //STEAM API CODE.
     inventoryApi.init           // initialising the STEAM inventory API object using init.

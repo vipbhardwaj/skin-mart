@@ -144,7 +144,9 @@
   }
   .form-item {
     color: white;
-    height: 3rem;
+    height: 4.3vh;
+    font-size: 2.5vw;
+    width: 50vw;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 4px;
     margin: auto;
@@ -152,7 +154,7 @@
     text-align: center;
   }
   .id_disp {
-    font-size: 4vh;
+    font-size: 3vh;
     color: white;
     text-shadow: 2px 1px 2px rgb(0, 0, 0);
     background-color: rgba(0,0,0,0.5);
