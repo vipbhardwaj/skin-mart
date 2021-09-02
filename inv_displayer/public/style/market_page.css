@@ -147,14 +147,12 @@ body {
 #popClose {
     margin: auto;
     color: blue;
-    float: right;
     font-size: 48px;
     font-weight: bold;
     grid-column: 3 / span 1;
     grid-row: 1 / span 1;
 }
-#popClose:hover,
-#popClose:focus
+#popClose:hover, #popClose:focus
 {
     color: rgb(255, 255, 255);
     text-decoration: none;
@@ -192,6 +190,8 @@ body {
 }
 #proSceneVid {
     margin-right: auto;
+    width: 40%;
+    height: 200px;
     box-shadow: 0 2px 6px 0 rgb(0, 0, 0), 0 6px 20px 0 rgb(0, 0, 0);
 }
 #proSceneImg-Content {
@@ -205,36 +205,8 @@ body {
     text-align: center;
     padding: 10px 20px;
 }
-
-@media screen and (max-width: 1100px) {
-    .grid-container {
-        min-height: 300px;
-        display: flex;
-        flex-direction: column;
-        font-size: 2.6vh;
-    }
-    #proScene {
-        display: flex;
-        flex-direction: column;
-    }
-    #proSceneVid {
-        margin-right: auto;
-        box-shadow: 0 2px 6px 0 rgb(0, 0, 0), 0 6px 20px 0 rgb(0, 0, 0);
-    }
-    #welcome {
-        margin: auto;
-        font-size: 4vh;
-    }
-    #pop_whatsSteamID-content {
-        display: flex;
-        flex-direction: column;
-    }
-    #popClose {
-        margin-right: 0;
-    }
-    body {
-        overflow-x: hidden;
-    }
+#proSceneImg {
+    width: 400px;
 }
 .bgShine1 {
     z-index: -1;
@@ -255,4 +227,81 @@ body {
     height: 15vh;
     background-color: rgb(253, 0, 0);
     transform: rotate(45deg);
+}
+.bgShine3 {
+    display: none;
+}
+@media screen and (max-width: 1100px) {
+    .grid-container {
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        font-size: 2.6vh;
+    }
+    #proSceneVid {
+        margin: auto;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 6px 0 rgb(0, 0, 0), 0 6px 20px 0 rgb(0, 0, 0);
+        width: 90%;
+        height: 500px;
+    }
+    #proSceneImg {
+        width: 100%;
+        height: auto;
+    }
+    #welcome {
+        margin: auto;
+        font-size: 4vh;
+    }
+    #pop_whatsSteamID-content {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 90%;
+        font-size: 4rem;
+    }
+    #pop_whatsSteamID-content > p {
+        font-size: 3rem;
+    }
+    #popClose {
+        margin-right: 0;
+        font-size: 7rem;
+    }
+    #pop_whatsCsgo-content > p {
+        font-size: 3rem;
+    }
+    #proScene {
+        display: flex;
+        flex-direction: column;
+    }
+    #popCloseWhatsCsgo {
+        margin-right: 0;
+        font-size: 10rem;
+    }
+    #proSceneImg-Content {
+        padding: 10px;
+        margin: auto;
+        height: auto;
+        width: 90%;
+    }
+    #polaroid {
+        font-size: 3rem;
+    }
+    .bgShine1 {
+        display: none;
+    }
+    .bgShine2 {
+        display: none;
+    }
+    .bgShine3 {
+        display: block;
+        z-index: -1;
+        position: absolute;
+        bottom: 10vh;
+        left: -15vh;
+        width: 30vh;
+        height: 30vh;
+        background-color: rgba(253, 0, 0, 0.623);
+        transform: rotate(45deg);
+    }
 }

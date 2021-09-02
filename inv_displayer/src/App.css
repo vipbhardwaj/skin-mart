@@ -93,7 +93,7 @@
 }
 .gridHead {
   display: grid;
-  grid-template-columns: [start] 50% [line2] 20% [line3] 30% [end];
+  grid-template-columns: [start] 50% [line2] 15% [line3] 35% [end];
   text-align: center;
   height: 3rem;
   color: white;
@@ -102,7 +102,7 @@
   display: grid;
   grid-template-columns: [start] 50% [line2] 20% [line3] 30% [end];
   text-align: center;
-  height: 3rem;
+  height: 2.7rem;
   color: white;
 }
 .itemsGrid {
