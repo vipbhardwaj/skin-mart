@@ -30,7 +30,7 @@
 #loading {
   visibility: hidden;
   color: red;
-  animation: loader 2s ease-in infinite;
+  animation: loader 2s ease-in-out infinite;
 }
 @keyframes loader {
   0% { 
@@ -57,9 +57,12 @@
 #submitID {
   background-color: red;
   color: black;
+  transition-property: border-radius;
+  transition-duration: 1s;
 }
 #submitID:hover {
   cursor: pointer;
+  border-radius: 0;
 }
 .itemHeadings {
   color: white;
@@ -72,7 +75,6 @@
   background-color: #262626;
   color: white;
 }
-
 #invTable {
   background-color: #000;
   opacity: 0.9;
@@ -82,14 +84,12 @@
   font-family: 'Architects Daughter', cursive;
   font-size: 1.3rem;
   text-align: center;
-  animation: wipeEnter 1s;
+  animation: wipeEnter 0.5s;
 }
 @keyframes wipeEnter {
-    0% {
-        transform: scale(0, 0.025);
-    } 50% {
-        transform: scale(1, 0.025);
-    }
+  0% {
+    transform: scaleY(0.025);
+  }
 }
 .gridHead {
   display: grid;
@@ -100,7 +100,7 @@
 }
 .moreInfo {
   display: grid;
-  grid-template-columns: [start] 50% [line2] 20% [line3] 30% [end];
+  grid-template-columns: [start] 50% [line2] 15% [line3] 35% [end];
   text-align: center;
   height: 2.7rem;
   color: white;
@@ -129,9 +129,15 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+.item-name {
+  transition-property: color;
+  transition-duration: 0.5s;
+}
 .item-name:hover {
   cursor: pointer;
   color: red;
+  transition-property: color;
+  transition-duration: 0.5s;
 }
 @media screen and (max-width: 1100px) {
   .form-container {
