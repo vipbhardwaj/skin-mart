@@ -219,8 +219,10 @@ body {
     height: 30vh;
     background-color: rgba(253, 0, 0, 0.623);
     transform: rotate(45deg);
-    animation-name: swipe1;
-    animation-duration: 1s;
+    animation-name: swipe;
+    animation-duration: 500ms;
+    transition-property: transform;
+    transition-timing-function: ease-out;
 }
 .bgShine2 {
     z-index: -1;
@@ -231,34 +233,13 @@ body {
     height: 15vh;
     background-color: rgb(253, 0, 0);
     transform: rotate(45deg);
-    animation-name: swipe2;
-    animation-duration: 1s;
+    animation-name: swipe;
+    animation-duration: 500ms;
+    transition-property: transform;
+    transition-timing-function: ease-out;
 }
 .bgShine3 {
     display: none;
-    animation-name: swipe3;
-    animation-duration: 1s;
-}
-@keyframes swipe1 {
-    0% {
-        transform: rotate(-45deg);
-    } 100% {
-        transform: rotate(45deg);
-    }
-}
-@keyframes swipe2 {
-    0% {
-        transform: rotate(-45deg);
-    } 100% {
-        transform: rotate(45deg);
-    }
-}
-@keyframes swipe3 {
-    0% {
-        transform: rotate(-45deg);
-    } 100% {
-        transform: rotate(45deg);
-    }
 }
 @media screen and (max-width: 1100px) {
     .grid-container {
@@ -331,6 +312,17 @@ body {
         width: 30vh;
         height: 30vh;
         background-color: rgba(253, 0, 0, 0.623);
+        transform: rotate(45deg);
+        animation-name: swipe;
+        animation-duration: 500ms;
+        transition-property: transform;
+        transition-timing-function: ease-out;
+    }
+}
+@keyframes swipe {
+    0% {
+        transform: rotate(-45deg);
+    } 100% {
         transform: rotate(45deg);
     }
 }

@@ -1,9 +1,16 @@
 .form-container {
+  transform: scaleY(0);
   height: 10vh;
   padding: 0.5rem;
   align-items: center;
   display: grid;
   grid-template-columns: repeat(auto-fill, 33%);
+  animation-name: flip;
+  animation-duration: 500ms;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(.18,.89,.32,1.28);
 }
 .form-item {
   color: white;
@@ -14,7 +21,16 @@
   padding: 0.5rem;
   text-align: center;  
 }
+#form_bg {
+  transform: scaleY(0);
+  background-color: #262626;
+  animation-name: flip;
+  animation-duration: 500ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
 .id_disp {
+  transform: scaleY(0);
   padding: 1rem;
   font-size: 5vh;
   color: white;
@@ -23,6 +39,18 @@
   font-family: 'Staatliches', cursive;
   display: flex;
   flex-direction: row;
+  animation-name: flip;
+  animation-duration: 500ms;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(.18,.89,.32,1.28);
+}
+@keyframes flip {
+  100% {
+    transform-origin: top;
+    transform: scaleY(1);
+  }
 }
 #accID {
   margin-right: auto;
@@ -70,26 +98,21 @@
   text-shadow: 2px 1px 2px red;
   font-family: 'Staatliches', cursive;
 }
-#form_bg {
-  width: 100%;
-  background-color: #262626;
-  color: white;
-}
-#invTable {
-  background-color: #000;
-  opacity: 0.9;
-  height: 55vh;
-  width: 100%;
-  display: none;
-  font-family: 'Architects Daughter', cursive;
-  font-size: 1.3rem;
-  text-align: center;
-  animation: wipeEnter 0.5s;
-}
-@keyframes wipeEnter {
-  0% {
-    transform: scaleY(0.025);
+  #invTable {
+    background-color: #000;
+    opacity: 0.9;
+    height: 55vh;
+    width: 100%;
+    display: none;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.3rem;
+    text-align: center;
+    animation: wipeEnter 0.5s;
   }
+  @keyframes wipeEnter {
+    0% {
+      transform: scaleY(0.025);
+    }
 }
 .gridHead {
   display: grid;
