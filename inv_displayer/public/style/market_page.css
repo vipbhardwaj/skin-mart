@@ -241,7 +241,7 @@ body {
 .bgShine3 {
     display: none;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (orientation:portrait) and (max-width: 1100px) {
     .grid-container {
         min-height: 300px;
         display: flex;
