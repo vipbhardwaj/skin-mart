@@ -3,4 +3,4 @@ This can be used to fetch the inventory of any profile for any STEAM based game 
 Inventories are fetched using the SteamID-64, which one can get by using their account name / STEAMURL.
 
 
-LINK -> `https://skin-mart.vercel.app/`
+LINK -> https://skin-mart.vercel.app/
